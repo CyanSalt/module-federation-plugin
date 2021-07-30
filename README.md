@@ -21,14 +21,12 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: 'website-2',
-      library: {
-        name: '$remoteEntry$website-2',
-        type: 'global',
-      },
-      filename: 'remote-entry.js',
       exposes: {
         foo: './src/foo.js',
       },
+      // library: 'website-2',
+      // libraryTarget: 'global',
+      // filename: 'remoteEntry.js',
     }),
   ],
 }
@@ -47,7 +45,9 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: 'website-1',
-      remotes: ['@website-2'],
+      remotes: {
+        '@website-2': 'website-2',
+      },
     }),
   ],
 }
@@ -58,7 +58,7 @@ Add the manifest file in your HTML
 ```html
 <html>
   <head>
-    <script src="http://localhost:3002/remote-entry.js"></script>
+    <script src="http://localhost:3002/remoteEntry.js"></script>
   </head>
   <body>
     <div id="app"></div>
