@@ -1,39 +1,25 @@
 {
-  "name": "webpack-plugin-module-federation",
-  "version": "1.0.0-beta-1",
-  "description": "",
-  "main": "./lib/index.js",
+  "name": "module-federation-plugin",
+  "version": "0.1.0-0",
+  "description": "Module federation for webpack@4",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "yarn build && jest",
-    "dev": "tsc -w",
-    "build": "tsc",
-    "dev:example": "cross-env NODE_ENV=development concurrently --raw \"cd examples/website1 && npm start\" \"cd examples/website2 && npm start\"",
-    "install:example": "concurrently --raw \"cd examples/website1 && yarn install\" \"cd examples/website2 && yarn install\"",
-    "clean:example": "concurrently --raw \"cd examples/website1 && rm -rf node_modules\" \"cd examples/website2 && rm -rf node_modules\"",
-    "clean": "npm run clean:example && rm -rf node_modules"
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts --fix ."
   },
-  "author": "",
+  "author": "CyanSalt",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.8.3",
-    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@types/expect": "^24.3.0",
-    "@types/jest": "^25.2.1",
-    "@types/webpack": "^4.41.12",
-    "babel-loader": "^8.1.0",
-    "concurrently": "^5.1.0",
-    "cross-env": "^7.0.2",
-    "jest": "^25.4.0",
-    "serve": "^11.3.0",
-    "shelljs": "^0.8.3",
-    "typescript": "^3.8.3",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "@cyansalt/eslint-config": "^1.11.2",
+    "eslint": "^7.30.0",
+    "eslint-plugin-galaxy": "^1.2.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-unicorn": "^34.0.1",
+    "webpack": "^4.46.0"
   },
-  "files": [
-    "index.js",
-    "lib"
-  ]
+  "peerDependencies": {
+    "webpack": ">= 4.0.0 < 5"
+  },
+  "dependencies": {
+    "webpack-sources": "^3.0.4"
+  }
 }
