@@ -26,8 +26,10 @@ module.exports = {
       exposes: {
         foo: './src/foo.js',
       },
-      // library: 'website-2',
-      // libraryTarget: 'global',
+      // library: {
+      //   type: 'global',
+      //   name: 'website-2',
+      // },
       // filename: 'remoteEntry.js',
     }),
   ],
