@@ -1,0 +1,94 @@
+{
+  "definitions": {
+    "Exposes": {
+      "description": "Modules that should be exposed by this container. Property names are used as public paths.",
+      "type": "object",
+      "additionalProperties": {
+        "description": "Modules that should be exposed by this container.",
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "ExternalsType": {
+      "description": "Specifies the default type of externals.",
+      "enum": [
+        "this",
+        "window",
+        "self",
+        "global",
+        "commonjs",
+        "commonjs2"
+      ]
+    },
+    "LibraryName": {
+      "description": "The name of the library (some types allow unnamed libraries too).",
+      "type": "string",
+      "minLength": 1
+    },
+    "LibraryOptions": {
+      "description": "Options for library.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/LibraryName"
+        },
+        "type": {
+          "$ref": "#/definitions/LibraryType"
+        }
+      }
+    },
+    "LibraryType": {
+      "description": "Type of library (types included by default are 'var', 'this', 'window', 'self', 'global', 'commonjs', 'commonjs2').",
+      "enum": [
+        "var",
+        "this",
+        "window",
+        "self",
+        "global",
+        "commonjs",
+        "commonjs2"
+      ]
+    },
+    "Remotes": {
+      "description": "Container locations from which modules should be resolved and loaded at runtime. Property names are used as request scopes.",
+      "type": "object",
+      "additionalProperties": {
+        "description": "Container location from which modules should be resolved and loaded at runtime.",
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "title": "ModuleFederationPluginOptions",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "exposes": {
+      "$ref": "#/definitions/Exposes"
+    },
+    "filename": {
+      "description": "The filename of the container as relative path inside the `output.path` directory.",
+      "type": "string",
+      "absolutePath": false
+    },
+    "library": {
+      "$ref": "#/definitions/LibraryOptions"
+    },
+    "name": {
+      "description": "The name of the container.",
+      "type": "string"
+    },
+    "remoteType": {
+      "description": "The external type of the remote containers.",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/ExternalsType"
+        }
+      ]
+    },
+    "remotes": {
+      "$ref": "#/definitions/Remotes"
+    }
+  }
+}
