@@ -1,0 +1,41 @@
+{
+  "definitions": {
+    "ExternalsType": {
+      "description": "Specifies the default type of externals.",
+      "enum": [
+        "this",
+        "window",
+        "self",
+        "global",
+        "commonjs",
+        "commonjs2"
+      ]
+    },
+    "Remotes": {
+      "description": "Container locations from which modules should be resolved and loaded at runtime. Property names are used as request scopes.",
+      "type": "object",
+      "additionalProperties": {
+        "description": "Container location from which modules should be resolved and loaded at runtime.",
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "title": "ContainerReferencePluginOptions",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "remoteType": {
+      "description": "The external type of the remote containers.",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/ExternalsType"
+        }
+      ]
+    },
+    "remotes": {
+      "$ref": "#/definitions/Remotes"
+    }
+  },
+  "required": ["remoteType", "remotes"]
+}
