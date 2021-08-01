@@ -4,11 +4,6 @@ module.exports = {
     '@cyansalt',
   ],
   rules: {
-    'unicorn/filename-case': ['error', {
-      cases: {
-        kebabCase: true,
-        pascalCase: true,
-      },
-    }],
+    'unicorn/filename-case': 'off',
   },
 }
