@@ -1,8 +1,10 @@
 ## module-federation-plugin
 
-Module federation for webpack@4
+Module federation for webpack@4.
 
 This project is forked from [alibaba/module-federation4](https://github.com/alibaba/module-federation4).
+
+**WARNING: This package is not yet stable and implements only a very limited number of features in the standard module federation. Please take special care before using it in a production environment.**
 
 ## Usage
 
@@ -70,6 +72,7 @@ Then use dynamic import
 
 ```jsx
 import('@website-2/foo')
+  .then(esm => esm.default) // This step is necessary due to the current implementation issues
   .then(({ xyz }) => {
     // ...
   })
