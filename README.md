@@ -1,6 +1,6 @@
 ## module-federation-plugin
 
-Module federation for webpack@4.
+[Module federation](https://webpack.js.org/concepts/module-federation/) for webpack@4.
 
 This project is forked from [alibaba/module-federation4](https://github.com/alibaba/module-federation4).
 
