@@ -74,7 +74,6 @@ Then use dynamic import
 
 ```jsx
 import('@website-2/foo')
-  .then(esm => esm.default) // This step is necessary due to the current implementation issues
   .then(({ xyz }) => {
     // ...
   })
