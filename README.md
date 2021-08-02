@@ -12,6 +12,8 @@ This project is forked from [alibaba/module-federation4](https://github.com/alib
 npm install --save-dev module-federation-plugin
 ```
 
+### Expose modules in containers
+
 ```js
 // webpack.config.js
 const { ModuleFederationPlugin } = require('module-federation-plugin')
@@ -36,7 +38,7 @@ module.exports = {
 }
 ```
 
-## Import module from remote
+### Import modules from remote containers
 
 ```js
 // webpack.config.js
@@ -57,7 +59,7 @@ module.exports = {
 }
 ```
 
-Add the manifest file in your HTML
+Currently you need to manually reference the container entry file in the HTML entry.
 
 ```html
 <html>
@@ -70,9 +72,9 @@ Add the manifest file in your HTML
 </html>
 ```
 
-Then use dynamic import
+You can use the `import()` call to reference these modules.
 
-```jsx
+```js
 import('@website-2/foo')
   .then(({ xyz }) => {
     // ...
