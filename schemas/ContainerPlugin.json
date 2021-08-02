@@ -28,9 +28,8 @@
       }
     },
     "LibraryType": {
-      "description": "Type of library (types included by default are 'var', 'this', 'window', 'self', 'global', 'commonjs', 'commonjs2').",
+      "description": "Type of library (types included by default are 'this', 'window', 'self', 'global', 'commonjs', 'commonjs2').",
       "enum": [
-        "var",
         "this",
         "window",
         "self",
