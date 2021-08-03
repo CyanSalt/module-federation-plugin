@@ -80,3 +80,31 @@ import('@website-2/foo')
     // ...
   })
 ```
+
+## Additional Features
+
+An `asyncChunkMode` option can be passed to the plugin to specify the default chunk mode of remote modules.
+
+```js
+// webpack.config.js
+const { ModuleFederationPlugin } = require('module-federation-plugin')
+
+module.exports = {
+  plugins: [
+    new ModuleFederationPlugin({
+      // ...
+      asyncChunkMode: 'eager',
+    }),
+  ],
+}
+```
+
+```js
+// In this case the following code
+import('@website-2/foo')
+
+// will be equivalent to
+import(/* webpackMode: 'eager' */'@website-2/foo')
+
+// which will not create extra asynchronous chunks
+```

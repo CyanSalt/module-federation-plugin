@@ -114,6 +114,10 @@
     },
     "remotes": {
       "$ref": "#/definitions/Remotes"
+    },
+    "asyncChunkMode": {
+      "description": "Default mode for dynamic imports of remote modules.",
+      "type": "string"
     }
   }
 }
