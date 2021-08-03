@@ -5,9 +5,35 @@
       "type": "object",
       "additionalProperties": {
         "description": "Modules that should be exposed by this container.",
-        "type": "string",
-        "minLength": 1
+        "anyOf": [
+          {
+            "$ref": "#/definitions/ExposesConfig"
+          },
+          {
+            "$ref": "#/definitions/ExposesItem"
+          }
+        ]
       }
+    },
+    "ExposesConfig": {
+      "description": "Advanced configuration for modules that should be exposed by this container.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "import": {
+          "$ref": "#/definitions/ExposesItem"
+        },
+        "name": {
+          "description": "Custom chunk name for the exposed module.",
+          "type": "string"
+        }
+      },
+      "required": ["import"]
+    },
+    "ExposesItem": {
+      "description": "Module that should be exposed by this container.",
+      "type": "string",
+      "minLength": 1
     },
     "ExternalsType": {
       "description": "Specifies the default type of externals.",
