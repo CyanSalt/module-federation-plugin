@@ -83,6 +83,11 @@
     "name": {
       "description": "The name of the container.",
       "type": "string"
+    },
+    "shareScope": {
+      "description": "The name of the share scope which is shared with the host (defaults to 'default').",
+      "type": "string",
+      "minLength": 1
     }
   }
 }
