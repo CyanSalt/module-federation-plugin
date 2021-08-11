@@ -7,8 +7,7 @@
         "window",
         "self",
         "global",
-        "commonjs",
-        "commonjs2"
+        "script"
       ]
     },
     "Remotes": {
@@ -16,9 +15,31 @@
       "type": "object",
       "additionalProperties": {
         "description": "Container location from which modules should be resolved and loaded at runtime.",
-        "type": "string",
-        "minLength": 1
+        "anyOf": [
+          {
+            "$ref": "#/definitions/RemotesConfig"
+          },
+          {
+            "$ref": "#/definitions/RemotesItem"
+          }
+        ]
       }
+    },
+    "RemotesConfig": {
+      "description": "Advanced configuration for container locations from which modules should be resolved and loaded at runtime.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "external": {
+          "$ref": "#/definitions/RemotesItem"
+        }
+      },
+      "required": ["external"]
+    },
+    "RemotesItem": {
+      "description": "Container location from which modules should be resolved and loaded at runtime.",
+      "type": "string",
+      "minLength": 1
     }
   },
   "title": "ContainerReferencePluginOptions",

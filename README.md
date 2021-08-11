@@ -40,6 +40,29 @@ module.exports = {
 
 ### Import modules from remote containers
 
+You can use the shortcut syntax in webpack v5.
+
+```js
+// webpack.config.js
+const { ModuleFederationPlugin } = require('module-federation-plugin')
+
+module.exports = {
+  output: {
+    publicPath: 'http://localhost:3001/',
+  },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: 'website-1',
+      remotes: {
+        '@website-2': 'website-2@http://localhost:3002/',
+      },
+    }),
+  ],
+}
+```
+
+Or you can reference the container entry file in the HTML entry manually.
+
 ```js
 // webpack.config.js
 const { ModuleFederationPlugin } = require('module-federation-plugin')
@@ -58,8 +81,6 @@ module.exports = {
   ],
 }
 ```
-
-Currently you need to manually reference the container entry file in the HTML entry.
 
 ```html
 <html>
