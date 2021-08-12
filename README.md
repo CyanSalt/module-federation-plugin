@@ -56,6 +56,7 @@ module.exports = {
       remotes: {
         '@website-2': 'website-2@http://localhost:3002/',
       },
+      // remoteType: 'script',
     }),
   ],
 }
@@ -77,6 +78,7 @@ module.exports = {
       remotes: {
         '@website-2': 'website-2',
       },
+      remoteType: 'global',
     }),
   ],
 }
