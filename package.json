@@ -17,11 +17,11 @@
   "author": "CyanSalt",
   "license": "ISC",
   "devDependencies": {
-    "@cyansalt/eslint-config": "^1.11.2",
-    "eslint": "^7.30.0",
-    "eslint-plugin-galaxy": "^1.2.3",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-unicorn": "^34.0.1",
+    "@cyansalt/eslint-config": "^2.0.1",
+    "eslint": "^8.0.0",
+    "eslint-plugin-galaxy": "^1.7.0",
+    "eslint-plugin-import": "^2.25.1",
+    "eslint-plugin-unicorn": "^37.0.1",
     "webpack": "^4.46.0"
   },
   "peerDependencies": {
