@@ -139,6 +139,10 @@
     "asyncChunkMode": {
       "description": "Default mode for dynamic imports of remote modules.",
       "type": "string"
+    },
+    "lazyOnce": {
+      "description": "Whether to replace the module with a synchronized one after loaded.",
+      "type": "boolean"
     }
   }
 }

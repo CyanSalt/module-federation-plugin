@@ -106,6 +106,8 @@ import('@website-2/foo')
 
 ## Additional Features
 
+### No Additional Chunks
+
 An `asyncChunkMode` option can be passed to the plugin to specify the default chunk mode of remote modules.
 
 ```js
@@ -130,4 +132,35 @@ import('@website-2/foo')
 import(/* webpackMode: 'eager' */'@website-2/foo')
 
 // which will not create extra asynchronous chunks
+```
+
+### Static Imports
+
+A `lazyOnce` option can be passed to the plugin to specify whether to replace the module with a synchronized one after loaded. This may be useful if you prefer static imports.
+
+```js
+// webpack.config.js
+const { ModuleFederationPlugin } = require('module-federation-plugin')
+
+module.exports = {
+  plugins: [
+    new ModuleFederationPlugin({
+      // ...
+      lazyOnce: true,
+    }),
+  ],
+}
+```
+
+```js
+// In the entry file
+import('@website-2/foo').then(() => import(/* webpackMode: 'eager' */'/path/to/the-real-entry-file'))
+
+// OR
+// import('@website-2/foo').then(() => require('/path/to/the-real-entry-file'))
+```
+
+```js
+// In the real entry file
+import { MyComponent } from '@website-2/foo';
 ```
