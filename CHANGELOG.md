@@ -1,3 +1,10 @@
+## [0.7.0](https://github.com/CyanSalt/module-federation-plugin/compare/v0.6.1...v0.7.0) (2021-11-09)
+
+
+### Features
+
+* add `lazyOnce` option ([b462027](https://github.com/CyanSalt/module-federation-plugin/commit/b462027fcc852a0233fcb14f7c9f5551ca85591f))
+
 ### [0.6.1](https://github.com/CyanSalt/module-federation-plugin/compare/v0.6.0...v0.6.1) (2021-10-26)
 
 
