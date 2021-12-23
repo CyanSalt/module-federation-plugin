@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: [
-    '@cyansalt',
+    '@cyansalt/preset',
   ],
   rules: {
     'unicorn/filename-case': ['error', {
