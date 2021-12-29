@@ -1,3 +1,10 @@
+### [0.7.1](https://github.com/CyanSalt/module-federation-plugin/compare/v0.7.0...v0.7.1) (2021-12-29)
+
+
+### Bug Fixes
+
+* add type to dependencies ([ac430c6](https://github.com/CyanSalt/module-federation-plugin/commit/ac430c6b7ef943fb1698d3424c88f4887916ddac))
+
 ## [0.7.0](https://github.com/CyanSalt/module-federation-plugin/compare/v0.6.1...v0.7.0) (2021-11-09)
 
 
