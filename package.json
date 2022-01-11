@@ -3,14 +3,21 @@
   "version": "0.7.1",
   "description": "Module federation for webpack@4",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "release": "release-it",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts --fix ."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CyanSalt/module-federation-plugin.git"
+    "url": "git+https://github.com/CyanSalt/module-federation-plugin.git"
   },
+  "bugs": {
+    "url": "https://github.com/CyanSalt/module-federation-plugin/issues"
+  },
+  "homepage": "https://github.com/CyanSalt/module-federation-plugin#readme",
   "keywords": [
     "webpack",
     "federation"
