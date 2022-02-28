@@ -1,3 +1,10 @@
+### [0.8.2](https://github.com/CyanSalt/module-federation-plugin/compare/v0.8.1...v0.8.2) (2022-02-28)
+
+
+### Bug Fixes
+
+* type error ([a901dcf](https://github.com/CyanSalt/module-federation-plugin/commit/a901dcfd06d969f2c0e28fa74b180167b02f5da8))
+
 ### [0.8.1](https://github.com/CyanSalt/module-federation-plugin/compare/v0.8.0...v0.8.1) (2022-02-28)
 
 
