@@ -1,3 +1,14 @@
+## [0.8.0](https://github.com/CyanSalt/module-federation-plugin/compare/v0.7.1...v0.8.0) (2022-02-28)
+
+
+### Features
+
+* add `additionalFeatures` option ([3aac561](https://github.com/CyanSalt/module-federation-plugin/commit/3aac5614785ebf2fd385c48093f081658efbfc5b))
+* lookup ids start with `./` ([629d46b](https://github.com/CyanSalt/module-federation-plugin/commit/629d46bd91ac8d848da84030cc2906f08c92ff98))
+* remove the fallback value of `filename` ([aedccc6](https://github.com/CyanSalt/module-federation-plugin/commit/aedccc6a8cb0df277e1571b35510b0b82ec05257))
+* replace `lazyOnce` with `keepAsync` ([fecf64f](https://github.com/CyanSalt/module-federation-plugin/commit/fecf64fd7acda6411d155befebccdbb09b48fc39))
+* set `library.type` to `var` by default ([f4aad4d](https://github.com/CyanSalt/module-federation-plugin/commit/f4aad4d242e773ad55cd3b13ae114cdba327a1f5))
+
 ### [0.7.1](https://github.com/CyanSalt/module-federation-plugin/compare/v0.7.0...v0.7.1) (2021-12-29)
 
 
