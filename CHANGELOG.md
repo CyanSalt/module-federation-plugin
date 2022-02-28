@@ -1,3 +1,10 @@
+### [0.8.1](https://github.com/CyanSalt/module-federation-plugin/compare/v0.8.0...v0.8.1) (2022-02-28)
+
+
+### Bug Fixes
+
+* compatible with webpack@5 ([2e790a5](https://github.com/CyanSalt/module-federation-plugin/commit/2e790a5d0b9456b2bc47809ba1c75a930b954302))
+
 ## [0.8.0](https://github.com/CyanSalt/module-federation-plugin/compare/v0.7.1...v0.8.0) (2022-02-28)
 
 
