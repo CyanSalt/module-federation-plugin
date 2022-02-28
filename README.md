@@ -1,6 +1,6 @@
 ## module-federation-plugin
 
-[Module federation](https://webpack.js.org/concepts/module-federation/) for webpack@4.
+[Module federation](https://webpack.js.org/concepts/module-federation/) for `webpack@4`.
 
 This project is forked from [alibaba/module-federation4](https://github.com/alibaba/module-federation4).
 
@@ -30,10 +30,9 @@ module.exports = {
         foo: './src/foo.js',
       },
       // library: {
-      //   type: 'global',
+      //   type: 'var',
       //   name: 'website-2',
       // },
-      // filename: 'remoteEntry.js',
     }),
   ],
 }
@@ -139,7 +138,7 @@ import(/* webpackMode: 'eager' */'@website-2/foo')
 // which will not create extra asynchronous chunks
 ```
 
-### Static Imports
+### No Static Imports
 
 By default, an asynchronous module will be replaced with a synchronous one after loaded. This may be useful if you prefer static imports.
 
@@ -173,3 +172,29 @@ module.exports = {
   ],
 }
 ```
+
+## Migrate to `webpack>=5`
+
+Simply perform the following steps in sequence:
+
+1. Modify the import path of the plugin.
+
+```diff
++ const { ModuleFederationPlugin } = require('webpack').container
+- const { ModuleFederationPlugin } = require('module-federation-plugin')
+```
+
+2. Remove the `additionalFeatures` option and modify the code that depends on these features.
+
+```diff
+module.exports = {
+  plugins: [
+    new ModuleFederationPlugin({
+      // ...
+-     additionalFeatures: {/* ... */},
+    }),
+  ],
+}
+```
+
+3. Run and test to confirm that the relevant functions are working properly.
