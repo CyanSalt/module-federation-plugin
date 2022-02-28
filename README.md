@@ -137,21 +137,7 @@ import(/* webpackMode: 'eager' */'@website-2/foo')
 
 ### Static Imports
 
-A `lazyOnce` option can be passed to the plugin to specify whether to replace the module with a synchronized one after loaded. This may be useful if you prefer static imports.
-
-```js
-// webpack.config.js
-const { ModuleFederationPlugin } = require('module-federation-plugin')
-
-module.exports = {
-  plugins: [
-    new ModuleFederationPlugin({
-      // ...
-      lazyOnce: true,
-    }),
-  ],
-}
-```
+By default, an asynchronous module will be replaced with a synchronous one after loaded. This may be useful if you prefer static imports.
 
 ```js
 // In the entry file
@@ -164,4 +150,20 @@ import('@website-2/foo').then(() => import(/* webpackMode: 'eager' */'/path/to/t
 ```js
 // In the real entry file
 import { MyComponent } from '@website-2/foo';
+```
+
+A `keepAsync` option can be passed to the plugin if you wish to disable the feature.
+
+```js
+// webpack.config.js
+const { ModuleFederationPlugin } = require('module-federation-plugin')
+
+module.exports = {
+  plugins: [
+    new ModuleFederationPlugin({
+      // ...
+      keepAsync: true,
+    }),
+  ],
+}
 ```
