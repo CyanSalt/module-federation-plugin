@@ -1,3 +1,10 @@
+### [0.8.3](https://github.com/CyanSalt/module-federation-plugin/compare/v0.8.2...v0.8.3) (2022-02-28)
+
+
+### Bug Fixes
+
+* missing code when `script` as `remoteType` ([d2c02f0](https://github.com/CyanSalt/module-federation-plugin/commit/d2c02f0ea128871f151dcd2202afbe73585d0882))
+
 ### [0.8.2](https://github.com/CyanSalt/module-federation-plugin/compare/v0.8.1...v0.8.2) (2022-02-28)
 
 
