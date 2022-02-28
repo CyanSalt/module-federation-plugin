@@ -107,6 +107,8 @@ import('@website-2/foo')
 
 ## Additional Features
 
+In addition to the module federation itself, this plugin also provides the `additionalFeatures` option to support some additional features.
+
 ### No Additional Chunks
 
 An `asyncChunkMode` option can be passed to the plugin to specify the default chunk mode of remote modules.
@@ -119,7 +121,9 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       // ...
-      asyncChunkMode: 'eager',
+      additionalFeatures: {
+        asyncChunkMode: 'eager',
+      },
     }),
   ],
 }
@@ -162,7 +166,9 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       // ...
-      keepAsync: true,
+      additionalFeatures: {
+        keepAsync: true,
+      },
     }),
   ],
 }

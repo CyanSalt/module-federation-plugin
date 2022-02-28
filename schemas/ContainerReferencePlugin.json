@@ -40,6 +40,20 @@
       "description": "Container location from which modules should be resolved and loaded at runtime.",
       "type": "string",
       "minLength": 1
+    },
+    "AdditionalFeatures": {
+      "description": "Features in addition to the module federation",
+      "type": "object",
+      "properties": {
+        "asyncChunkMode": {
+          "description": "Default mode for dynamic imports of remote modules.",
+          "type": "string"
+        },
+        "keepAsync": {
+          "description": "Whether to disable replacing the module with a synchronized one after loaded.",
+          "type": "boolean"
+        }
+      }
     }
   },
   "title": "ContainerReferencePluginOptions",
@@ -57,13 +71,8 @@
     "remotes": {
       "$ref": "#/definitions/Remotes"
     },
-    "asyncChunkMode": {
-      "description": "Default mode for dynamic imports of remote modules.",
-      "type": "string"
-    },
-    "keepAsync": {
-      "description": "Whether to disable replacing the module with a synchronized one after loaded.",
-      "type": "boolean"
+    "additionalFeatures": {
+      "$ref": "#/definitions/AdditionalFeatures"
     }
   },
   "required": ["remoteType", "remotes"]
