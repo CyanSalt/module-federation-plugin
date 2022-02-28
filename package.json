@@ -1,6 +1,6 @@
 {
   "name": "module-federation-plugin",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "Module federation for webpack@4",
   "main": "index.js",
   "directories": {

@@ -1,3 +1,10 @@
+### [0.8.4](https://github.com/CyanSalt/module-federation-plugin/compare/v0.8.3...v0.8.4) (2022-02-28)
+
+
+### Bug Fixes
+
+* runtime globals ([334d7d9](https://github.com/CyanSalt/module-federation-plugin/commit/334d7d995b1d693a72d6be2744dc184f7f0b2a19))
+
 ### [0.8.3](https://github.com/CyanSalt/module-federation-plugin/compare/v0.8.2...v0.8.3) (2022-02-28)
 
 
