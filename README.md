@@ -25,6 +25,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: 'website-2',
+      filename: 'remoteEntry.js',
       exposes: {
         foo: './src/foo.js',
       },
