@@ -1,5 +1,7 @@
 ## module-federation-plugin
 
+[![npm](https://img.shields.io/npm/v/module-federation-plugin.svg)](https://www.npmjs.com/package/module-federation-plugin)
+
 [Module federation](https://webpack.js.org/concepts/module-federation/) for `webpack@4`.
 
 This project is forked from [alibaba/module-federation4](https://github.com/alibaba/module-federation4).
