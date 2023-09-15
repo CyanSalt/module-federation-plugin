@@ -6,7 +6,8 @@
 
 This project is forked from [alibaba/module-federation4](https://github.com/alibaba/module-federation4).
 
-**WARNING: This package is not yet stable and implements only a very limited number of features in the standard module federation. Please take special care before using it in a production environment.**
+> [!WARNING]
+> This package is not yet stable and implements **only a very limited number of features in the standard module federation**. Please take special care before using it in a production environment.
 
 ## Usage
 
