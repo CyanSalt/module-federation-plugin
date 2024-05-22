@@ -27,6 +27,7 @@
   "devDependencies": {
     "@cyansalt/eslint-config": "^4.0.0",
     "@release-it/conventional-changelog": "^8.0.1",
+    "eslint": "^9.3.0",
     "release-it": "^17.0.0",
     "webpack": "^4.46.0"
   },
